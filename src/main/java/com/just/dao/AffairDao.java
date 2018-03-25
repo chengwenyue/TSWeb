@@ -1,4 +1,4 @@
-﻿package com.just.dao;
+package com.just.dao;
 
 import java.util.List;
 import java.util.Map;

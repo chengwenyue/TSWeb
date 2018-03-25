@@ -1,4 +1,4 @@
-﻿package com.just.dao.impl;
+package com.just.dao.impl;
 
 import java.util.ArrayList;
 import java.util.Iterator;

@@ -1,4 +1,4 @@
-﻿package com.just.service;
+package com.just.service;
 
 import java.sql.Time;
 import java.util.Iterator;
