@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config>
+	<default-config>
+		<property name="driverClass">com.mysql.jdbc.Driver</property>
+		<!-- <property name="jdbcUrl">jdbc:mysql://115.159.78.134/timesecretary</property> -->
+		<property name="jdbcUrl">jdbc:mysql://121.42.140.230/timesecretary</property>
+		<!-- <property name="jdbcUrl">jdbc:mysql://localhost/timesecretary</property> -->
+		<property name="user">root</property>
+		<property name="password">cwy517.Q</property>
+	</default-config> <!-- This app is massive! -->
+</c3p0-config>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<constant name="struts.multipart.saveDir" value="/tmp"/>
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+	<constant name="struts.i18n.encoding" value="utf-8" />
+	<constant name="struts.configuration.xml.reload" value="true"></constant>
+	
+	<package name="index" namespace="/" extends="struts-default">
+	 <action name="index" class="com.just.action.IndexAction">  
+            <result name="success">/index.jsp</result>
+        </action> 
+	</package>
+	
+	 <package name="user" namespace="/" extends="json-default" strict-method-invocation="false">
+        <action name="login" class="com.just.action.UserAction" method="login">  
+            <result type="json"/>
+        </action> 
+        <action name="register" class="com.just.action.UserAction" method="register">  
+            <result type="json"/>
+        </action> 
+        <action name="search" class="com.just.action.UserAction" method="search">  
+            <result type="json"/>
+        </action> 
+        
+        <action name="affair_*" class="com.just.action.AffairAction" method="{1}">
+    		<result type="json"/>
+    	</action>
+    	    	
+    	 <action name="category_*" class="com.just.action.CategoryAction" method="{1}">
+    		<result type="json"/>
+    	</action>
+    	<action name="addAffair" class="com.just.action.AffairAction" method="addAffair">
+    		<result type="json"/>
+    	</action>
+    	<action name="addAffairs" class="com.just.action.AffairAction" method="addAffairs">
+    		<result type="json"/>
+    	</action>
+    	<action name="delAffair" class="com.just.action.AffairAction" method="delAffair">
+    		<result type="json"/>
+    	</action>
+    	<action name="delAffairs" class="com.just.action.AffairAction" method="delAffairs">
+    		<result type="json"/>
+    	</action>
+    	<action name="updateAffair" class="com.just.action.AffairAction" method="updateAffair">
+    		<result type="json"/>
+    	</action>
+    	<action name="updateAffairs" class="com.just.action.AffairAction" method="updateAffairs">
+    		<result type="json"/>
+    	</action>
+    	<action name="queryByUserId" class="com.just.action.AffairAction" method="queryByUserId">
+    		<result type="json"/>
+    	</action>
+    	
+    	
+    </package>  
+    
+</struts> 
